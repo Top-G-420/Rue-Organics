@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Earth-toned organic aesthetic for agricultural products */
+    --background: 45 25% 98%;
+    --foreground: 140 45% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 45% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 45% 15%;
+
+    /* Deep organic green - primary brand color */
+    --primary: 140 65% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 140 50% 50%;
+    --primary-dark: 140 70% 25%;
+
+    /* Warm earth brown - secondary */
+    --secondary: 30 25% 85%;
+    --secondary-foreground: 140 45% 15%;
+
+    /* Muted earth tones */
+    --muted: 45 20% 92%;
+    --muted-foreground: 140 20% 40%;
+
+    /* Harvest orange accent */
+    --accent: 25 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 15% 88%;
+    --input: 140 15% 88%;
+    --ring: 140 65% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors for app features */
+    --success: 120 60% 45%;
+    --warning: 35 90% 55%;
+    --info: 200 60% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(140 65% 35%), hsl(140 70% 45%));
+    --gradient-warm: linear-gradient(135deg, hsl(30 50% 70%), hsl(45 60% 80%));
+    --gradient-earth: linear-gradient(180deg, hsl(45 25% 98%), hsl(140 15% 95%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(140 40% 15% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(140 40% 15% / 0.12);
+    --shadow-strong: 0 8px 24px hsl(140 40% 15% / 0.16);
+
+    /* Sidebar */
+    --sidebar-background: 140 30% 96%;
+    --sidebar-foreground: 140 45% 15%;
+    --sidebar-primary: 140 65% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 140 20% 90%;
+    --sidebar-accent-foreground: 140 45% 15%;
+    --sidebar-border: 140 15% 88%;
+    --sidebar-ring: 140 65% 35%;
+  }
+
+  .dark {
+    --background: 140 30% 8%;
+    --foreground: 140 20% 92%;
+
+    --card: 140 25% 12%;
+    --card-foreground: 140 20% 92%;
+
+    --popover: 140 25% 12%;
+    --popover-foreground: 140 20% 92%;
+
+    --primary: 140 60% 45%;
+    --primary-foreground: 140 30% 8%;
+    --primary-light: 140 55% 55%;
+    --primary-dark: 140 70% 30%;
+
+    --secondary: 30 20% 20%;
+    --secondary-foreground: 140 20% 92%;
+
+    --muted: 140 20% 18%;
+    --muted-foreground: 140 15% 60%;
+
+    --accent: 25 80% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 20% 22%;
+    --input: 140 20% 22%;
+    --ring: 140 60% 45%;
+
+    --success: 120 55% 40%;
+    --warning: 35 85% 50%;
+    --info: 200 55% 45%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(140 60% 35%), hsl(140 65% 45%));
+    --gradient-warm: linear-gradient(135deg, hsl(30 40% 30%), hsl(45 50% 40%));
+    --gradient-earth: linear-gradient(180deg, hsl(140 30% 8%), hsl(140 25% 12%));
+
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 8px 24px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 140 25% 12%;
+    --sidebar-foreground: 140 20% 92%;
+    --sidebar-primary: 140 60% 45%;
+    --sidebar-primary-foreground: 140 30% 8%;
+    --sidebar-accent: 140 20% 18%;
+    --sidebar-accent-foreground: 140 20% 92%;
+    --sidebar-border: 140 20% 22%;
+    --sidebar-ring: 140 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
